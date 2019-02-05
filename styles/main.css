@@ -1,0 +1,540 @@
+* {
+  box-sizing: border-box;
+  font-family: segoe UI;
+}
+
+body {
+  margin: 0px;
+  position: relative;
+  padding-bottom: 150px;
+}
+header {
+  width: 100%;
+  height: 75px;
+
+  padding: 5px;
+  -webkit-box-shadow: 0px 3px 37px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 37px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 37px -2px rgba(0,0,0,0.75);
+
+  position: relative;
+}
+
+nav li:hover {
+  border-bottom: 3px solid #940000;
+  cursor: pointer;
+}
+header:hover {
+  border-bottom-color: white;
+  border-bottom: 1px solid #940000;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+}
+header:hover #logo-shadow {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+
+header:hover nav > ul >  li {
+  color: black;
+}
+
+header h1 {
+  color: #940000;
+  font-size: 40px;
+}
+#logo {
+  position: absolute;
+  left: 30px;
+  width: 80px;
+  height: 100px;
+  background: #940000;
+  text-align: center;
+  color: white;
+  z-index: 1
+}
+#logo img {
+  width: 60%;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+#logo-shadow {
+  z-index: 2;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 38px;
+  -webkit-box-shadow: 6px 11px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 11px 25px 0px rgba(0,0,0,0.75);
+  box-shadow: 6px 11px 25px 0px rgba(0,0,0,0.75);
+}
+
+.click {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 50px;
+}
+.ponisti {
+  right: 20px;
+  top: 20px;
+  width: 35px;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  outline: 1px dashed green;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked ~ nav{
+  display: block ;
+}
+
+nav {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0px;
+}
+nav > ul >  li {
+  display: inline;
+  border: 2px solid white;
+  padding: 10px;
+  padding-bottom: 1px;
+  color: gray;
+  font-weight: bold;
+}
+.usluge {
+  position: relative;
+
+}
+.usluge:hover + .usluge-drop {
+  display: block;
+
+}
+.usluge-drop {
+  display: none;
+  left: 170px;
+  top: 41px;
+  position: absolute;
+  list-style-type: none;
+  padding: 0px;
+  border: 1px solid #940000;
+  border-top: 0px;
+}
+.usluge-drop:hover {
+  display: block;
+
+}
+.usluge-drop li {
+  padding: 10px;
+  padding-bottom: 2px;
+  background-color: white;
+}
+main {
+  background-color: white;
+  width: 100%;
+  padding: 2%;
+  padding-top: 40px;
+  height: auto;
+}
+
+#glavna-naslov h1 {
+  font-size: 50px;
+  text-align: center;
+}
+#glavna-naslov h2 {
+  font-weight: lighter;
+  text-align: center;
+}
+#glavna-naslov img {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  width: 15%;
+}
+
+#glavna-info {
+  margin-top: 50px;
+  width: 100%;
+  height: 200px;
+}
+#glavna-info h1 {
+  text-align: center;
+}
+#glavna-info h2 {
+  font-weight: lighter;
+  text-align: center;
+}
+#glavna-info .info {
+  width: 660px;
+  margin: auto;
+}
+#glavna-info div div {
+  display: inline-block;
+  background-color: #940000;
+  padding: 10px;
+  color: white;
+  margin-left: 10px;
+}
+@keyframes kontaktAnimacija {
+  from {font-size: 12px;}
+  to {font-size: 20px;}
+}
+
+#glavna-kontakt {
+  display: block;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 20px;
+  border: 2px solid #3c763d;
+  color: #3c763d;
+  width: 300px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  animation: kontaktAnimacija 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes infoAnimacija {
+  from {background-color: white;}
+  to {background-color: #940000;}
+}
+#info-prvi,
+#info-drugi,
+#info-treci,
+#info-cetvrti {
+  animation: infoAnimacija 2s;
+}
+#info-drugi {
+  animation-delay: 1s;
+}
+#info-treci {
+  animation-delay: 2s;
+}
+#info-cetvrti {
+  animation-delay: 3s;
+}
+
+#o-meni .jezici {
+  width: 46%;
+  display: inline-block;
+}
+#o-meni .jezici:last-of-type {
+  float: right;
+}
+#o-meni .info {
+  width: 90%;
+  margin: auto;
+}
+#o-meni .info #uvod {
+  background-color: #c3d6bd;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+summary {
+  font-size: 20px;
+  font-style: italic;
+}
+.progres {
+  width: 100%;
+  height: 20px;
+  border: 1px solid gainsboro;
+  margin-bottom: 20px;
+}
+.unutrasnji {
+  height: 20px;
+}
+
+@keyframes progres90 {
+  from {width: 0%; background-color:red}
+  to {width: 90%; background-color:#216321}
+}
+.progres90 {
+  background-color: #216321;
+  width: 90%;
+  animation: progres90 2s;
+}
+
+@keyframes progres80 {
+  from {width: 0%; background-color:red}
+  to {width: 80%; background-color:#216321}
+}
+.progres80 {
+  background-color: #216321;
+  width: 80%;
+  animation: progres80 2s;
+}
+
+@keyframes progres70 {
+  from {width: 0%; background-color:red}
+  to {width: 70%; background-color:#216321}
+}
+.progres70 {
+  background-color: #216321;
+  width: 70%;
+  animation: progres70 2s;
+}
+
+@keyframes progres35 {
+  from {width: 0%; background-color:red}
+  to {width: 35%; background-color: #c57e16}
+}
+.progres35{
+  background-color: #c57e16;
+  width: 35%;
+  animation: progres35 2s;
+}
+
+@keyframes progres30 {
+  from {width: 0%; background-color:red}
+  to {width: 30%; background-color: #c57e16}
+}
+.progres30{
+  background-color: #c57e16;
+  width: 30%;
+  animation: progres30 2s;
+}
+#portfolio > div{
+  padding: 0px 60px;
+}
+
+#portfolio div div {
+  width: 340px;
+  overflow: hidden;
+  height: 540px;
+  border-right: 2px solid gray;
+  display: inline-block;
+  float: left;
+  margin: 2%;
+  border: 20px solid black;
+  border-width: 20px 4px;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+#portfolio iframe {
+  width: 360px;
+  height: 510px;
+  overflow: hidden;
+  margin-left: -5px;
+}
+
+
+
+
+
+#info, form {
+  margin-top: 20px;
+  vertical-align: top;
+  width: 50%;
+  float: left;
+  display: inline-block;
+
+}
+#info {
+  width: 40%;
+}
+#info a {
+  padding: 5px 10px;
+  outline: 1px solid gainsboro;
+  text-decoration: none;
+  color: black
+}
+#info a:hover {
+  background-color: gainsboro;
+}
+
+#info p {
+  text-align: center;
+}
+#info > p:nth-child(even) {
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+#inf  a  {
+  margin: 10px !important;
+}
+
+
+form div {
+  display: inline-block;
+  width: 50%;
+  float: left;
+}
+form div p {
+  padding-left: 5%;
+  margin-bottom: 0px;
+}
+form > p {
+  padding-left: 2.5%;
+  margin-bottom: 0px;
+}
+form div input {
+  width: 90%;
+  height: 35px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+form textarea{
+  width: 95%;
+  margin: auto;
+  display: block;
+  padding-top: 5px;
+}
+input {
+  font-family: Segoe UI;
+}
+input[type="text"],
+input[type="email"],
+textarea
+{
+  padding-left: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 0px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  color: black;
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active {
+  background: white;
+  outline: 0px;
+}
+
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+  outline: 0px;
+}
+
+
+input[type="submit"] {
+  background-color: #3c763d;
+  color: white;
+  float: right;
+  margin-right: 30%;
+}
+input[type="reset"] {
+  background-color: #a94442;
+  color: white;
+  float: left;
+  margin-left: 30%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: 2px solid #3c763d;
+}
+
+.clear {
+  margin-top: 20px;
+    clear: both;
+}
+footer {
+  height: 10vh;
+  line-height: 10vh;
+  margin-top: 50px;
+  position:  absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: #940000;
+  color: white;
+  text-align: center;
+}
+@media only screen and (max-width: 620px) {
+
+    .otvori {
+      display: block;
+    }
+    input[type="checkbox"] {
+      display: block;
+    }
+    input[type="checkbox"]:checked ~ .ponisti {
+      display: block !important;
+    }
+    input[type="checkbox"]:checked ~ .otvori {
+      display: none !important;
+    }
+    nav {
+      display: none;
+      width: 65%;
+
+      top: 45px;
+    }
+    nav ul{
+      width: 100%;
+    }
+    nav ul li {
+      display: block;
+      float: none;
+      text-align: center;
+      background: #940000;
+      height: 50px;
+      line-height: 50px;
+      margin: 0px;
+      padding: 0px;
+      color: white;
+      font-weight: lighter;
+    }
+    header:hover nav > ul >  li {
+      color: white;
+    }
+
+    #glavna-naslov img {
+      width: 50%;
+    }
+    #glavna-info .info {
+      width: 98%;
+      margin: 0px;
+    }
+    #glavna-info div div {
+      display: block;
+    }
+    #glavna-kontakt {
+      margin-top: 200px;
+    }
+    #o-meni .jezici {
+      width: 100%;
+      display: block;
+      float: none;
+    }
+}
